@@ -348,7 +348,7 @@ class _PageViewSecondState extends ConsumerState<PageViewSecond> {
                   SizedBox(height: 15),
                   TextButton(
                       style: ButtonStyle(
-                          fixedSize: MaterialStatePropertyAll(Size(250, 50))),
+                          fixedSize: WidgetStatePropertyAll(Size(250, 50))),
                       child: Text("Enviar url", style: textTheme.displaySmall),
                       onPressed: () {
                         setState(() {
@@ -452,7 +452,7 @@ class _PageViewSecondState extends ConsumerState<PageViewSecond> {
                                   ),
                                   TextButton(
                                     style: ButtonStyle(
-                                        fixedSize: MaterialStatePropertyAll(
+                                        fixedSize: WidgetStatePropertyAll(
                                             Size(250, 50))),
                                     child: Text("Inserir imagem da sua galeria",
                                         style: textTheme.displaySmall),
@@ -464,7 +464,7 @@ class _PageViewSecondState extends ConsumerState<PageViewSecond> {
                                   SizedBox(height: 15),
                                   TextButton(
                                     style: ButtonStyle(
-                                        fixedSize: MaterialStatePropertyAll(
+                                        fixedSize: WidgetStatePropertyAll(
                                             Size(250, 50))),
                                     child: Text("Inserir link da internet",
                                         style: textTheme.displaySmall),

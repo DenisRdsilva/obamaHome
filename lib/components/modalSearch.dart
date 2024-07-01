@@ -50,7 +50,7 @@ class _SearchDialogState extends State<SearchDialog> {
           });
         },
         style: ButtonStyle(
-          fixedSize: MaterialStatePropertyAll(Size(36, 40)),
+          fixedSize: WidgetStatePropertyAll(Size(36, 40)),
         ),
         child: Icon(CupertinoIcons.search,
             size: 20, color: widget.isHovered ? primary : onPrimary),

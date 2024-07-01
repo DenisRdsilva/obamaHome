@@ -183,7 +183,7 @@ Widget blogPageView(context, swidth, _pageController, datas) {
                                 crossAxisCount: 4),
                         itemBuilder: (BuildContext context, int mediaId) {
                           return InkWell(
-                              overlayColor: const MaterialStatePropertyAll(
+                              overlayColor: const WidgetStatePropertyAll(
                                   Colors.transparent),
                               onTap: () {},
                               child: SizedBox(

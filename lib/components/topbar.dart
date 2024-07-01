@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:obamahome/components/launchSocialMedia.dart';
 import 'package:obamahome/utils/app_padding.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../auth/components/googleAuth.dart';
-import '../auth/components/googleSignInButton.dart';
 import '../utils/app_theme.dart';
 import '../utils/cores_personalizadas.dart';
 
@@ -93,7 +91,7 @@ class _TopBarState extends ConsumerState<TopBar> {
                             margin: const EdgeInsets.only(left: 20),
                             child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
+                                backgroundColor: WidgetStateProperty.all(
                                     CoresPersonalizadas.azulObama),
                               ),
                               onPressed: () {
@@ -175,7 +173,7 @@ class _TopBarState extends ConsumerState<TopBar> {
             Container(
                 child: TextButton(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
+                      backgroundColor: WidgetStateProperty.all(
                           CoresPersonalizadas.azulObama),
                     ),
                     onPressed: () {

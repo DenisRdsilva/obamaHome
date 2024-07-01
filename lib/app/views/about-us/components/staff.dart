@@ -28,7 +28,7 @@ class StaffCard extends StatelessWidget {
           onTap: () {},
           mouseCursor: SystemMouseCursors.basic,
           overlayColor:
-              const MaterialStatePropertyAll(CoresPersonalizadas.azulObama),
+              const WidgetStatePropertyAll(CoresPersonalizadas.azulObama),
           child: Column(
             children: [
               Container(

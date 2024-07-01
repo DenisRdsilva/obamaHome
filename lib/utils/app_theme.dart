@@ -65,26 +65,26 @@ final MaterialApp AppMaterial = MaterialApp(
   theme: ThemeData(
       menuButtonTheme: MenuButtonThemeData(
           style: ButtonStyle(
-        overlayColor: MaterialStatePropertyAll(background),
+        overlayColor: WidgetStatePropertyAll(background),
       )),
       menuBarTheme: MenuBarThemeData(
           style: MenuStyle(
               // padding: MaterialStatePropertyAll(EdgeInsets.symmetric(horizontal: 18, vertical: 15)),
-              elevation: MaterialStatePropertyAll(0),
-              backgroundColor: MaterialStatePropertyAll(background),
-              shape: MaterialStatePropertyAll(
+              elevation: WidgetStatePropertyAll(0),
+              backgroundColor: WidgetStatePropertyAll(background),
+              shape: WidgetStatePropertyAll(
                   BeveledRectangleBorder(borderRadius: BorderRadius.zero)))),
       textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(primary),
-        foregroundColor: MaterialStatePropertyAll(background),
-        padding: MaterialStatePropertyAll(EdgeInsets.all(10)),
-        textStyle: MaterialStatePropertyAll(textTheme.displaySmall),
-        overlayColor: MaterialStatePropertyAll(Colors.lightBlue),
+        backgroundColor: WidgetStatePropertyAll(primary),
+        foregroundColor: WidgetStatePropertyAll(background),
+        padding: WidgetStatePropertyAll(EdgeInsets.all(10)),
+        textStyle: WidgetStatePropertyAll(textTheme.displaySmall),
+        overlayColor: WidgetStatePropertyAll(Colors.lightBlue),
       )),
       iconButtonTheme: IconButtonThemeData(
           style: ButtonStyle(
-              shape: MaterialStatePropertyAll(
+              shape: WidgetStatePropertyAll(
                   RoundedRectangleBorder(borderRadius: BorderRadius.zero)))),
       useMaterial3: true,
       visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -101,8 +101,6 @@ final MaterialApp AppMaterial = MaterialApp(
         onSecondary: onSecondary,
         error: error,
         onError: onError,
-        background: background,
-        onBackground: onBackground,
         surface: background,
         onSurface: onSurface,
       ),

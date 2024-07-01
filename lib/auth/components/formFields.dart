@@ -35,7 +35,7 @@ Widget formFieldHidden(context, String formLabel, bool showPassword,
             highlightColor: onSecondary,
             splashColor: onSecondary,
             style:
-                ButtonStyle(fixedSize: MaterialStatePropertyAll(Size(18, 18))),
+                ButtonStyle(fixedSize: WidgetStatePropertyAll(Size(18, 18))),
             onPressed: () => displayPassword(),
             icon: showPassword
                 ? Icon(FontAwesomeIcons.eye)

@@ -97,17 +97,17 @@ class _NavMenuState extends State<NavMenu> {
                   });
                 },
                 menuStyle: MenuStyle(
-                  backgroundColor: MaterialStateProperty.all(background),
+                  backgroundColor: WidgetStateProperty.all(background),
                 ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(background),
-                  foregroundColor: MaterialStateProperty.all(
+                  backgroundColor: WidgetStateProperty.all(background),
+                  foregroundColor: WidgetStateProperty.all(
                       widget.itemValues[i].path.contains(currentRoute)
                           ? primary
                           : widget.itemValues[i].itemHover
                               ? primary
                               : onPrimary),
-                  textStyle: MaterialStateProperty.all(textTheme.headlineSmall),
+                  textStyle: WidgetStateProperty.all(textTheme.headlineSmall),
                 ),
                 menuChildren: <Widget>[
                   if (i >= 0 && i < widget.itemValues.length) ...{
@@ -135,18 +135,18 @@ class _NavMenuState extends State<NavMenu> {
                             });
                           },
                           style: ButtonStyle(
-                            padding: MaterialStatePropertyAll(
+                            padding: WidgetStatePropertyAll(
                                 EdgeInsets.symmetric(horizontal: 20)),
                             minimumSize:
-                                MaterialStatePropertyAll(Size(250, 44)),
+                                WidgetStatePropertyAll(Size(250, 44)),
                             backgroundColor:
-                                MaterialStateProperty.all(background),
-                            overlayColor: MaterialStateProperty.all(primary),
-                            foregroundColor: MaterialStateProperty.all(
+                                WidgetStateProperty.all(background),
+                            overlayColor: WidgetStateProperty.all(primary),
+                            foregroundColor: WidgetStateProperty.all(
                                 widget.itemValues[i].subItemHover[j]
                                     ? background
                                     : onPrimary),
-                            textStyle: MaterialStateProperty.all(
+                            textStyle: WidgetStateProperty.all(
                                 textTheme.displaySmall),
                           ),
                           onPressed: () {

@@ -171,13 +171,13 @@ class Carousel extends StatelessWidget {
                                           TextButton(
                                               style: ButtonStyle(
                                                 fixedSize:
-                                                    MaterialStatePropertyAll(
+                                                    WidgetStatePropertyAll(
                                                         Size(150, 50)),
                                                 backgroundColor:
-                                                    MaterialStatePropertyAll(
+                                                    WidgetStatePropertyAll(
                                                         onPrimary),
                                                 overlayColor:
-                                                    MaterialStatePropertyAll(
+                                                    WidgetStatePropertyAll(
                                                         onPrimary),
                                               ),
                                               onPressed: () {},
@@ -336,10 +336,10 @@ class Carousel extends StatelessWidget {
                         TextButton(
                             style: ButtonStyle(
                               fixedSize:
-                                  MaterialStatePropertyAll(Size(150, 50)),
+                                  WidgetStatePropertyAll(Size(150, 50)),
                               backgroundColor:
-                                  MaterialStatePropertyAll(onPrimary),
-                              overlayColor: MaterialStatePropertyAll(onPrimary),
+                                  WidgetStatePropertyAll(onPrimary),
+                              overlayColor: WidgetStatePropertyAll(onPrimary),
                             ),
                             onPressed: () {},
                             child: Text('CONTACT US',

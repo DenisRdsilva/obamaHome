@@ -118,21 +118,21 @@ class _ListLessonPlanState extends ConsumerState<ListLessonPlan> {
                                   margin: EdgeInsets.all(0.0),
                                   child: TextButton(
                                     style: ButtonStyle(
-                                      padding: MaterialStateProperty.all<
+                                      padding: WidgetStateProperty.all<
                                           EdgeInsetsGeometry>(
                                         EdgeInsets.symmetric(
                                           horizontal: 0.0,
                                         ),
                                       ),
-                                      shape: MaterialStatePropertyAll(
+                                      shape: WidgetStatePropertyAll(
                                         RoundedRectangleBorder(
                                           side: BorderSide.none,
                                         ),
                                       ),
-                                      overlayColor: MaterialStatePropertyAll(
+                                      overlayColor: WidgetStatePropertyAll(
                                         Color(0x00000000),
                                       ),
-                                      backgroundColor: MaterialStatePropertyAll(
+                                      backgroundColor: WidgetStatePropertyAll(
                                         Color(0x00000000),
                                       ),
                                     ),
