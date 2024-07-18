@@ -7,7 +7,7 @@ class AuthenticationController extends StateNotifier<AsyncValue<User?>> {
   AuthenticationController({required this.authService})
       : super(const AsyncData<User?>(null));
 
-  final AuthenticationService authService;
+  final FirebaseAuthService authService;
 
   Future<void> authenticate() async {
     state = const AsyncLoading<User?>();

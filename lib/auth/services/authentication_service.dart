@@ -2,25 +2,45 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-class AuthenticationService {
+
+class FirebaseAuthService {
+
+  FirebaseAuthService({required this.ref});
+
   Ref ref;
-  final FirebaseAuth _firebaseAuth;
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  AuthenticationService({required this.ref}) : _firebaseAuth = FirebaseAuth.instance;
+  Stream<User?> authStateChanges() {
+    return _firebaseAuth.authStateChanges();
+  }
 
-  Stream<User?> get authStateChanges => _firebaseAuth.authStateChanges();
+  Future<User?> signInWithEmailAndPassword(String email, String password) async {
+    final UserCredential userCredential = await _firebaseAuth.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+    return userCredential.user;
+  }
 
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
     await _googleSignIn.signOut();
   }
 
+  Future<User?> signUpWithEmailAndPassword(String email, String password) async {
+    final UserCredential userCredential = await _firebaseAuth.createUserWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+    return userCredential.user;
+  }
+
   Future<User?> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       if (googleUser == null) {
-        return null; // O usuário cancelou o login
+        return null;
       }
 
       final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
@@ -38,8 +58,9 @@ class AuthenticationService {
   }
 }
 
-final authServiceProvider = Provider<AuthenticationService>((ref) {
-  return AuthenticationService(
+
+final authServiceProvider = Provider<FirebaseAuthService>((ref) {
+  return FirebaseAuthService(
     ref: ref,
   );
 });
